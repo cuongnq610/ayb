@@ -8,12 +8,6 @@ export const HEADER_MENU = [
     isDisabled: false,
   },
   // {
-  //   name: 'Staking',
-  //   path: '/staking',
-  //   icon: '/headers/staking-icon.svg',
-  //   isDisabled: true,
-  // },
-  // {
   //   name: 'AIRDROP',
   //   path: '/',
   //   icon: '/headers/airdrop.svg',
@@ -56,6 +50,12 @@ export const HEADER_MENU = [
         path: 'https://twitter.com/AllYourBase_AYB',
       },
     ],
+  },
+  {
+    name: 'Referral',
+    path: '/referral',
+    icon: '/headers/referral-icon.svg',
+    isDisabled: false,
   },
   // {
   //   name: 'About',
@@ -243,20 +243,17 @@ export enum RankEnum {
   UNRANKED = 'unranked',
 }
 
-export enum Symbols{
+export enum Symbols {
   BTC = 'BTC',
-  ETH = 'ETH'
+  ETH = 'ETH',
 }
 
 export enum AddressToken {
   BTC = '0x1cd0fcbe15e4365c8d11513e0406ca00f02e61c8',
-  ETH = '0x4f5003fd2234df46fb2ee1531c89b8bdcc372255'
+  ETH = '0x4f5003fd2234df46fb2ee1531c89b8bdcc372255',
 }
 
-export const AddressSupport = [
-  AddressToken.BTC,
-  AddressToken.ETH
-]
+export const AddressSupport = [AddressToken.BTC, AddressToken.ETH];
 
 export enum PAIR {
   BTC = '0xcbcdf9626bc03e24f779434178a73a0b4bad62ed',
@@ -264,5 +261,5 @@ export enum PAIR {
   AYB = '0x7cb15019adfbce42bffba0958e9901d0cef5ef69',
   TOSHI = '0x4b0aaf3ebb163dd45f663b38b6d93f6093ebc2d3',
   MOCHI = '0xbe09692245268b607c3029469d14be06191a0566',
-  TYBG = '0x798654e614866113b63bb081621b2f9b126eeb84'
+  TYBG = '0x798654e614866113b63bb081621b2f9b126eeb84',
 }
