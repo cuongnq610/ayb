@@ -1,0 +1,40 @@
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_input",
+        "type": "bytes32"
+      }
+    ],
+    "name": "decodeSingle",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256[4]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "val",
+        "type": "bytes32[]"
+      }
+    ],
+    "name": "decodeMultiplePair",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256[4][]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "pure",
+    "type": "function"
+  }
+]

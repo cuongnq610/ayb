@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Press+Start+2P&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --header-height: 68px;
+  --color-primary: rgba(41, 24, 85, 1);
+  --color-secondary: rgba(58, 36, 95, 0.31);
+  --color-tertiary: rgba(29, 0, 57, 1);
+  --color-quaternary: rgba(9, 1, 40, 1);
+  --color-quinary:rgba(111, 27, 218, 1);
+  --color-quinary-2: rgba(231, 53, 88, 1);
+  --color-pink: #C72EEC;
+  --color-purple: #FFA0D4;
+  --border-color-pink: #462374;
+  --background-color-pink: #2F1452;
+  --bg-active: #C428EC;
+  --bg-coins: #34144E;
+  --text-color-pink: #EC9DFF;
+  --bg-button: #481F6A;
+  --bg-card-content: #0C0025;
+  --bet-up: #0CF574;
+  --bet-up-border: #0CF574;
+  --bet-down: #E73558;
+  --bet-down-border: #EF4E6D;
+  --text-down: #E73659;
+  --border-live-card: #FF62E6;
+  --bg-live-card: #1A0223;
+  --gray-1: #3A3541;
+  --green-1: #23955B;
+  --gradient-text-stroke: linear-gradient(to bottom, #FFA285 0%, #FB2DFF 100%);
+  --gradient-game-card: linear-gradient(to bottom right, #D5465B -20%, #8B2CB5 0%, #4059AA 95%, #56BAF0 120%);
+  --gradient-game-cardA: linear-gradient(180deg, #1D0039 0%, #090128 100%);
+  --border-gradient-game-card: linear-gradient(180deg, #C900FC -0.16%, rgba(0, 97, 186, 0.900833) 58.17%, rgba(181, 0, 158, 0.83) 99.84%);
+  --border-gradient-button-faucet: linear-gradient(-90deg, #6F1BDA , #E73558 );
+  --border-gradient-button-mint: linear-gradient(180deg, #8BFF81,#FBF67D, #E57EFF, #FF5476);
+  --bg-gradient-bet: linear-gradient(to bottom right, #250338 -10%, #180220 60%, #1B0008 120%);
+  --border-gradient-bet: linear-gradient(to bottom right, #B826F3 -10%, #285fb47d 50%, #a521998c 120%);
+  --gradient-trading-view: linear-gradient(to bottom right, #271D25 -50%, #1A1A1D 45%, #2D1A48 250%);
+  --gradient-button: linear-gradient(277.4deg, #6F1BDA 9.09%, #E73558 147.5%);
+  --gradient-collect: linear-gradient(to bottom right, #250338 -1%, #180220 105%);
+  --border-gradient-button: linear-gradient(176deg, #8BFF81 -10%, #FBF67D 50%, #E57EFF 75%, #FF5476 100%);
+  --gradient-rank-gold: linear-gradient(90deg, #E3A455 6.89%, #F6DBA6 32.34%, #FFEBC4 60.51%, #F0BE79 74.98%, #BA7F3B 101.08%, #EEBC70 110.71%, #3F1F0F 132.63%);
+  --gradient-rank-silver: linear-gradient(90deg, #AEB6BC 4.93%, #D8DDE2 30.43%, #F9FCFE 59.47%, #D8DDE2 79.91%, #AEB6BC 100.92%);
+  --gradient-rank-purple: linear-gradient(90deg, #B164FF 5.74%, #E395FF 29.41%, #EAAEFF 51.23%, #E395FF 75.87%, #B164FF 100%);
+  --gradient-rank-blue: linear-gradient(90deg, #5799F7 5.74%, #08D3FF 29.41%, #00F0FF 51.23%, #08D3FF 75.87%, #5799F7 100%);
+  --gradient-rank-green: linear-gradient(90deg, #11998E 5.74%, #38EF7D 29.41%, #0DF575 51.23%, #38EF7D 75.87%, #11998E 100%);
+  --gradient-rank-black:  linear-gradient(90deg, #232323 9.84%, #0E0E0E 33.03%, #232323 54.81%, #0B0B0B 76.6%, #232323 100.49%, #000000 124.39%);
+  --gradient-unranked:  linear-gradient(to right, #1E1130 0%, #1E1130 100%);
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+.toast-position {
+  top: 80px !important;
+  right: initial !important;
+  z-index: 9999;
+}
+
+.bg-common {
+  background: linear-gradient(0deg, #291855, #291855),
+  linear-gradient(0deg, rgba(58, 36, 95, 0.31), rgba(58, 36, 95, 0.31));
+}
+
+.bg-main {
+  background: linear-gradient(180deg, #1D0039 0%, #090128 100%);
+}
+
+.bg-menu {
+  background: linear-gradient(90deg, #1a0038 0%, #190037 100%);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #B392BC;
+  border-radius: 0 10px;
+}
+
+iframe .js-copyright-label {
+  display: none !important;
+}
+@media screen and (min-width: 768px) {
+  .toast-position {
+    top: initial !important;
+    bottom: 1rem !important;
+    right: 1rem !important;
+    transform: translateX(0) !important;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1090px) {
+  .header-container {
+    padding: 0 2rem !important;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1300px) {
+  .header-container {
+    padding: 0 3% !important;
+  }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1333px) {
+  .header-container {
+    padding: 0 2% !important;
+  }
+}
+
+#advanced-chart-widget-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
