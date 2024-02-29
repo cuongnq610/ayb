@@ -1,25 +1,33 @@
+import { getAllVotings } from '@/services/VotingApiService';
 import VotingItem from '../VotingItem';
+import { useEffect, useMemo, useState } from 'react';
+import { TVotingItem } from '../index.definition';
+import { useSelector } from 'react-redux';
+import { votingSelector } from '@/redux/slices/votingSlice';
 
 export default function VotingList() {
-  return (
-    <div>
-      <div className="text-white text-base mb-8">
-        Get involved and have your say! Vote for your favorite projects to be listed on AYB. Token holders of the top 3
-        voted projects will receive $AYB airdrops!
-      </div>
-      <div className="text-white text-base">
-        Each address can cast 3 votes! <br />
-        Voting period: 2/29 - 3/7
-      </div>
+  const { selectedVotingList } = useSelector(votingSelector);
 
-      <div className="mt-8 flex flex-col gap-4">
-        <VotingItem />
-        <VotingItem />
-        <VotingItem />
-        <VotingItem />
-        <VotingItem />
-        <VotingItem />
-      </div>
+  const [votingList, setVotingList] = useState<TVotingItem[]>([]);
+
+  const votingDisabled = useMemo(() => {
+    return selectedVotingList.length >= 3;
+  }, [selectedVotingList]);
+
+  const getVotingList = async () => {
+    const _votingList = await getAllVotings();
+    setVotingList(_votingList);
+  };
+
+  useEffect(() => {
+    getVotingList();
+  }, []);
+
+  return (
+    <div className="mt-8 flex flex-col gap-4">
+      {votingList.map((item) => (
+        <VotingItem key={item._id} data={item} disabled={votingDisabled} />
+      ))}
     </div>
   );
 }

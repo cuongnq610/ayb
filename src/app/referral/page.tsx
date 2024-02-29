@@ -1,20 +1,18 @@
 'use client';
 
-import { UseCheckDevice } from "@/hooks/useCheckDevice";
-import { useAppSelector } from "@/redux/hook";
-import { gameSelector } from "@/redux/slices/gameSlice";
-import History from "@/views/game/History/History";
-import Referral from "@/views/referral/Referral";
-import { Transition } from "@headlessui/react";
-import clsx from "clsx";
-import { Fragment } from "react";
-import Scrollbars from "react-custom-scrollbars-2";
+import { UseCheckDevice } from '@/hooks/useCheckDevice';
+import { useAppSelector } from '@/redux/hook';
+import { gameSelector } from '@/redux/slices/gameSlice';
+import History from '@/views/game/History/History';
+import Referral from '@/views/referral/Referral';
+import { Transition } from '@headlessui/react';
+import clsx from 'clsx';
+import { Fragment } from 'react';
+import Scrollbars from 'react-custom-scrollbars-2';
 
 export default function PredictionPage() {
-    const { isMobile } = UseCheckDevice();
+  const { isMobile } = UseCheckDevice();
   const { isShowHistory } = useAppSelector(gameSelector);
-
-  console.log({isShowHistory})
 
   return (
     <Scrollbars

@@ -1,4 +1,8 @@
 // import GameIcon from '../../public/icon/'
+export const SOCIAL_MEDIA_LINKS = {
+  TELEGRAM: 'https://t.me/AllYourBase_AYB',
+  TWITTER: 'https://twitter.com/AllYourBase_AYB',
+};
 
 export const HEADER_MENU = [
   {
